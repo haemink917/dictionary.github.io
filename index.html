@@ -100,9 +100,12 @@
                         당연하지만 웬만한 웹사이트에선 XSS 정도는 막혀있으니 이러한 해킹이 일어날까 지나치게 걱정하진 않아도 된다.<br><br>
 
                         <b>실제 예시:</b><br>
-                        버튼 만들기: <pre>&lt;a href="warning.html"&gt;&lt;button onclick="myFunction()"&gt;제출&lt;/button&gt;&lt;/a&gt;</pre>
+                        빈칸에 무언가 적고 제출 버튼을 누르면 출력 칸에 똑같이 적힌다. <br>
+                        근데 빈칸에 평범한 글 대신 아래와 같은 HTML과 JS로 이루어진 웹 언어를 적으면 무엇이 출력될까? 직접해보자. <br>
+                        버튼 만들기: <pre>&lt;a href="warning.html"&gt;&lt;button onclick="myFunction()"&gt;Click!!&lt;/button&gt;&lt;/a&gt;</pre>
                         <input type="text" placeholder="여기에 붙여넣으세요!" id="text"><button onclick="myFunction()">제출</button><br>
-                        아래 출력:
+                        <hr>
+                        출력:
                         <p id="demo"></p>
                         <script>
                         function myFunction() {
